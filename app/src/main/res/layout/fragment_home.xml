@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_5sdp"
+    tools:background="@color/background"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ui.HomeFragment">
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/fab_delete"
+        app:icon="@drawable/ic_delete"
+        app:iconSize="@dimen/_25sdp"
+        app:iconTint="@color/iconTint"
+        android:backgroundTint="@color/backgroundEditText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fab_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/backgroundOne"
+        app:iconTint="@color/iconTint"
+        android:layout_margin="@dimen/_10sdp"
+        app:icon="@drawable/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/ttv_notes"
+        app:layout_constraintTop_toTopOf="@id/fab_delete"
+        app:layout_constraintBottom_toBottomOf="@id/fab_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="Notes"
+        android:textSize="@dimen/_22ssp"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_search_container"
+        app:layout_constraintTop_toBottomOf="@id/fab_delete"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_gravity="bottom|start|end"
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        android:hint="Search - "
+        app:boxStrokeWidth="0.5dp"
+        app:boxBackgroundColor="@color/backgroundEditText"
+        android:textColorHint="@color/textColor"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/iconTint"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/iconTint"
+        app:startIconTint="@color/iconTint"
+        app:startIconDrawable="@drawable/ic_search"
+        style = "@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_search"
+            android:maxLines="1"
+            android:textColorHint="#545867"
+            android:inputType="text"
+            android:textColor="@color/iconTint"
+            android:imeOptions="actionSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        tools:listitem="@layout/item_note_home"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_search_container"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btn_addNoteExtended"
+        android:layout_margin="@dimen/_10sdp"
+        app:icon="@drawable/img"
+        app:iconTint="@color/white"
+        app:rippleColor="#5CFFFFFF"
+        android:backgroundTint="@color/backgroundEditText"
+        android:textColor="@color/white"
+        android:text="Add Note"
+        app:iconSize="@dimen/_21sdp"
+        android:textSize="@dimen/_15ssp"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_45sdp"/>
+
+<!--        animation-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/et_search_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/animationView"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lottie_rawRes="@raw/nothing_to_do_windmill"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

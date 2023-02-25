@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#FF121119</color>
+    <color name="backgroundEditText">#FF181C25</color>
+    <color name="textColor">#FF333744</color>
+    <color name="iconTint">#93959A</color>
+    <color name="backgroundOne">#FF181C25</color>
+    //24 28 37
+
+
+    <array name="bottomSheetColors">
+
+        <item>#99FF1744</item>
+        <item>#99F50057</item>
+        <item>#99D500F9</item>
+        <item>#99651FFF</item>
+        <item>#993D5AFE</item>
+        <item>#992979FF</item>
+        <item>#9900B0FF</item>
+        <item>#9900E5FF</item>
+        <item>#991DE9B6</item>
+        <item>#9900E676</item>
+        <item>#9976FF03</item>
+        <item>#99C6FF00</item>
+        <item>#99FFEA00</item>
+        <item>#99FFC400</item>
+        <item>#99FF9100</item>
+        <item>#99FF3D00</item>
+
+    </array>
+    
+    <string-array name="bottom_sheet_color_list">
+
+        <item>#99FF1744</item>
+        <item>#99F50057</item>
+        <item>#99D500F9</item>
+        <item>#99651FFF</item>
+        <item>#993D5AFE</item>
+        <item>#992979FF</item>
+        <item>#9900B0FF</item>
+        <item>#9900E5FF</item>
+        <item>#991DE9B6</item>
+        <item>#9900E676</item>
+        <item>#9976FF03</item>
+        <item>#99C6FF00</item>
+        <item>#99FFEA00</item>
+        <item>#99FFC400</item>
+        <item>#99FF9100</item>
+        <item>#99FF3D00</item>
+
+    </string-array>
+    
+</resources>

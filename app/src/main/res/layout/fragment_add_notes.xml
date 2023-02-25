@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/background"
+    tools:context=".fragments.ui.AddNotesFragment">
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:backgroundTint="#191D25"
+        app:icon="@drawable/ic_left"
+        app:iconSize="@dimen/_25sdp"
+        app:iconTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:backgroundTint="#191D25"
+        app:icon="@drawable/ic_more"
+        app:iconSize="@dimen/_20sdp"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:visibility="invisible"
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:backgroundTint="#191D25"
+        app:icon="@drawable/saved"
+        app:iconSize="@dimen/_20sdp"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/fabChangeColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:visibility="invisible"
+        android:id="@+id/fabChangeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:backgroundTint="#191D25"
+        app:icon="@drawable/ic_color_palette"
+        app:iconSize="@dimen/_20sdp"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/fabOptions"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:background = "@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:hint="Title"
+        android:textColor="#E6FFFFFF"
+        android:inputType="text"
+        android:textStyle="bold"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:textColorHint="@color/iconTint"
+        android:textSize="@dimen/_25ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fabGoBack" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintStart_toStartOf="@id/et_title"
+        app:layout_constraintTop_toBottomOf="@id/et_title"
+        android:id="@+id/ll_dateAndNumberOfCharacters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/ttv_dateAndTime"
+            android:layout_gravity="center"
+            tools:text="Sun, 10:24"
+            android:textColor = "#555965"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:visibility="invisible"
+            android:id="@+id/view_separator"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/view_background_2"
+            android:backgroundTint="#555965"
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="@dimen/_15sdp"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/ttv_numberOfCharacters"
+            android:layout_gravity="center"
+            tools:text="4036 Characters"
+            android:textColor = "#555965"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:layout_width="@dimen/_3sdp"
+        android:layout_height="0dp"
+        android:background="@drawable/view_background"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/et_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/et_label"
+        app:layout_constraintTop_toTopOf="@id/et_label" />
+
+    <EditText
+        android:id="@+id/et_label"
+        android:gravity="start"
+        android:textColor="#E6FFFFFF"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:hint="To-Do"
+        android:maxLength="8"
+        android:inputType="text"
+        android:background = "@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:textColorHint="@color/iconTint"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_dateAndNumberOfCharacters" />
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@id/et_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/et_content"
+                app:layout_constraintTop_toTopOf="@id/et_content"
+                app:layout_constraintBottom_toBottomOf="@id/et_content"
+                android:background="@drawable/view_background_2"
+                android:backgroundTint="#FFEA00"
+                android:layout_width="@dimen/_3sdp"
+                android:layout_height="0dp"/>
+
+            <EditText
+                android:id="@+id/et_content"
+                android:textColor="#E6FFFFFF"
+                android:textSize="@dimen/_12ssp"
+                android:hint="Content"
+                android:gravity="top"
+                android:imeOptions="normal"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColorHint="@color/iconTint"
+                android:background = "@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
