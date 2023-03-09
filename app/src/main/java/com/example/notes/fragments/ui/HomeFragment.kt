@@ -70,7 +70,6 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
         binding.etSearch.setOnFocusChangeListener { v, hasFocus ->
             if(hasFocus){
-                v.snackbar("focused")
                 textWatcher()
             }
         }
